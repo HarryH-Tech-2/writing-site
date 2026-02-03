@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry H | Freelance Writer</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%234F46E5'/%3E%3Cstop offset='100%25' style='stop-color:%2306B6D4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='48' fill='url(%23g)'/%3E%3Cpath d='M65 25L75 35L40 70L25 75L30 60Z' fill='white'/%3E%3Cpath d='M62 28L72 38' stroke='%234F46E5' stroke-width='2'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
+    <div id="particles-js"></div>
+
+    <!-- Cursor Effect -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <span class="logo-text">H</span>
+        </div>
+        <div class="nav-links">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#work" class="nav-link">Work</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+            <a href="https://www.linkedin.com/in/harry-herskowitz/" target="_blank" rel="noopener noreferrer" class="nav-link">LinkedIn</a>
+            <a href="/resume.pdf" target="_blank" class="nav-link">Resume</a>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+            <a href="#contact" class="nav-link cta-btn">Let's Talk</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#work" class="mobile-link">Work</a>
+        <a href="#faq" class="mobile-link">FAQ</a>
+        <a href="https://www.linkedin.com/in/harry-herskowitz/" target="_blank" rel="noopener noreferrer" class="mobile-link">LinkedIn</a>
+        <a href="/resume.pdf" target="_blank" class="mobile-link">Resume</a>
+        <a href="#contact" class="mobile-link">Let's Talk</a>
+        <button class="mobile-theme-toggle" id="mobile-theme-toggle">
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <span class="theme-text">Light Mode</span>
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                <span class="title-line">Crafting Stories</span>
+                <span class="title-line gradient-text">That Convert</span>
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">
+                I'm <span class="highlight">Harry</span>, a freelance writer with <span class="highlight">5+ years</span> of experience
+                creating compelling technology and business content for industry leaders.
+            </p>
+            <div class="hero-clients" data-aos="fade-up" data-aos-delay="400">
+                <span class="clients-label">Trusted by</span>
+                <div class="clients-logos">
+                    <span class="client-name">BitGo</span>
+                    <span class="client-divider">•</span>
+                    <span class="client-name">Money.com</span>
+                    <span class="client-divider">•</span>
+                    <span class="client-name">J.P. Morgan</span>
+                    <span class="client-divider">•</span>
+                    <span class="client-name">Solana</span>
+                </div>
+            </div>
+            <div class="hero-cta" data-aos="fade-up" data-aos-delay="500">
+                <a href="#contact" class="btn btn-primary">
+                    <span>Work Together</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#work" class="btn btn-secondary">
+                    <span>View My Work</span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual" data-aos="fade-left" data-aos-delay="600">
+            <div class="floating-card card-1">
+                <div class="card-icon">📝</div>
+                <span>Long-form Content</span>
+            </div>
+            <div class="floating-card card-2">
+                <div class="card-icon">🎯</div>
+                <span>SEO Optimized</span>
+            </div>
+            <div class="floating-card card-3">
+                <div class="card-icon">💼</div>
+                <span>B2B & Tech</span>
+            </div>
+            <div class="floating-card card-4">
+                <div class="card-icon">📊</div>
+                <span>Case Studies</span>
+            </div>
+            <div class="floating-card card-5">
+                <div class="card-icon">📚</div>
+                <span>Technical Docs</span>
+            </div>
+            <div class="floating-card card-6">
+                <div class="card-icon">📰</div>
+                <span>Whitepapers</span>
+            </div>
+            <div class="orbit-ring"></div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Writing That Makes an Impact</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p class="about-lead">
+                        I specialize in transforming complex technical concepts into engaging,
+                        accessible content that resonates with your target audience.
+                    </p>
+                    <p>
+                        With a focus on <strong>long-form case studies</strong> and <strong>technical documentation</strong>,
+                        I help businesses tell their stories in ways that educate, engage, and convert.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="5">0</span><span class="stat-suffix">+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="100">0</span><span class="stat-suffix">+</span>
+                            <span class="stat-label">Articles Published</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="50">0</span><span class="stat-suffix">+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-skills" data-aos="fade-left">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <h3>Web3 & Blockchain</h3>
+                        <p>Deep expertise in cryptocurrency, DeFi, and blockchain technology content.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            </svg>
+                        </div>
+                        <h3>Finance & Fintech</h3>
+                        <p>Clear, compliant financial content that builds trust and authority.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </div>
+                        <h3>Technology</h3>
+                        <p>Technical writing that makes complex topics accessible and engaging.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section class="work" id="work">
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Featured Work</h2>
+            </div>
+
+            <div class="work-filters" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web3">Web3</button>
+                <button class="filter-btn" data-filter="finance">Finance</button>
+                <button class="filter-btn" data-filter="tech">Technology</button>
+            </div>
+
+            <div class="work-grid">
+                <!-- 2025 Projects -->
+                <article class="work-card featured" data-category="web3" data-aos="fade-up" data-aos-delay="100" data-url="https://www.solanacompany.co/blogs/what-is-solana-used-for">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <span class="card-category">Web3</span>
+                        <h3 class="card-title">What is Solana Used For?</h3>
+                        <p class="card-description">Exploring Solana's real-world applications from DeFi to tokenization and decentralized infrastructure.</p>
+                        <div class="card-meta">
+                            <span class="card-year">2025</span>
+                            <span class="card-type">Educational Content</span>
+                        </div>
+                        <div class="card-hover-content">
+                            <a href="https://www.solanacompany.co/blogs/what-is-solana-used-for" target="_blank" rel="noopener noreferrer" class="view-project">View Article →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2024 Projects -->
+                <article class="work-card" data-category="web3" data-aos="fade-up" data-aos-delay="150">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <span class="card-category">Web3</span>
+                        <h3 class="card-title">Blockchain Accounting Fundamentals</h3>
+                        <p class="card-description">An in-depth exploration of accounting principles in the blockchain era.</p>
+                        <div class="card-meta">
+                            <span class="card-year">2024</span>
+                            <span class="card-type">Long-form Article</span>
+                        </div>
+                        <div class="card-hover-content">
+                            <span class="view-project">View Article →</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="work-card" data-category="web3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <span class="card-category">Web3</span>
+                        <h3 class="card-title">Web3 Payments Revolution</h3>
+                        <p class="card-description">Analyzing the impact of decentralized payments on global finance.</p>
+                        <div class="card-meta">
+                            <span class="card-year">2024</span>
+                            <span class="card-type">Analysis</span>
+                        </div>
+                        <div class="card-hover-content">
+                            <span class="view-project">View Article →</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="work-card featured" data-category="finance" data-aos="fade-up" data-aos-delay="250" data-url="https://docs.google.com/document/d/1umY5GoinPfY2StfxRSF0lV8_YjLIx9ZvLwF3ACKoKeM/edit?usp=sharing">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <span class="card-category">Finance</span>
+                        <h3 class="card-title">Embedded Payments Deep Dive</h3>
+                        <p class="card-description">Comprehensive analysis of embedded finance trends and implications.</p>
+                        <div class="card-meta">
+                            <span class="card-year">2024</span>
+                            <span class="card-type">Industry Report</span>
+                        </div>
+                        <div class="card-hover-content">
+                            <a href="https://docs.google.com/document/d/1umY5GoinPfY2StfxRSF0lV8_YjLIx9ZvLwF3ACKoKeM/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="view-project">View Article →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="work-card" data-category="finance" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <span class="card-category">Finance</span>
+                        <h3 class="card-title">SoFi Stock Analysis</h3>
+                        <p class="card-description">In-depth investment analysis for retail and institutional investors.</p>
+                        <div class="card-meta">
+                            <span class="card-year">2024</span>
+                            <span class="card-type">Stock Analysis</span>
+                        </div>
+                        <div class="card-hover-content">
+                            <span class="view-project">View Article →</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Featured Client Projects -->
+                <article class="work-card featured" data-category="web3" data-aos="fade-up" data-aos-delay="350" data-url="https://www.bitgo.com/resources/blog/what-is-a-multi-signature-wallet/">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <span class="card-category">Web3</span>
+                        <h3 class="card-title">Multi-Signature Wallets & Crypto Security</h3>
+                        <p class="card-description">Comprehensive guide on multi-sig wallets, security benefits, and best practices for institutional investors.</p>
+                        <div class="card-meta">
+                            <span class="card-year">BitGo</span>
+                            <span class="card-type">Technical Guide</span>
+                        </div>
+                        <div class="card-hover-content">
+                            <a href="https://www.bitgo.com/resources/blog/what-is-a-multi-signature-wallet/" target="_blank" rel="noopener noreferrer" class="view-project">View Article →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="work-card featured" data-category="web3" data-aos="fade-up" data-aos-delay="400" data-url="https://www.bitgo.com/resources/blog/blockchain-infrastructure-as-a-service/">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <span class="card-category">Web3</span>
+                        <h3 class="card-title">Blockchain Infrastructure: Build vs. Buy</h3>
+                        <p class="card-description">Strategic analysis for financial institutions on blockchain infrastructure deployment decisions.</p>
+                        <div class="card-meta">
+                            <span class="card-year">BitGo</span>
+                            <span class="card-type">Industry Report</span>
+                        </div>
+                        <div class="card-hover-content">
+                            <a href="https://www.bitgo.com/resources/blog/blockchain-infrastructure-as-a-service/" target="_blank" rel="noopener noreferrer" class="view-project">View Article →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="work-card featured" data-category="finance" data-aos="fade-up" data-aos-delay="450" data-url="https://developer.payments.jpmorgan.com/docs/commerce/optimization-protection/capabilities/tokenization">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <span class="card-category">Finance</span>
+                        <h3 class="card-title">Payment Tokenization Guide</h3>
+                        <p class="card-description">Technical documentation on tokenization methods, implementation workflows, and PCI compliance for JP Morgan's developer portal.</p>
+                        <div class="card-meta">
+                            <span class="card-year">JP Morgan</span>
+                            <span class="card-type">Technical Docs</span>
+                        </div>
+                        <div class="card-hover-content">
+                            <a href="https://developer.payments.jpmorgan.com/docs/commerce/optimization-protection/capabilities/tokenization" target="_blank" rel="noopener noreferrer" class="view-project">View Article →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="work-card featured" data-category="tech" data-aos="fade-up" data-aos-delay="500" data-url="https://rockpaperreality.com/insights/ar-use-cases/augmented-reality-in-fashion/">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <span class="card-category">Technology</span>
+                        <h3 class="card-title">Augmented Reality in Fashion</h3>
+                        <p class="card-description">Comprehensive guide on AR applications in fashion retail, from virtual try-ons to immersive shopping experiences.</p>
+                        <div class="card-meta">
+                            <span class="card-year">Rock Paper Reality</span>
+                            <span class="card-type">Industry Guide</span>
+                        </div>
+                        <div class="card-hover-content">
+                            <a href="https://rockpaperreality.com/insights/ar-use-cases/augmented-reality-in-fashion/" target="_blank" rel="noopener noreferrer" class="view-project">View Article →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2023 Projects -->
+                <article class="work-card" data-category="web3" data-aos="fade-up" data-aos-delay="550">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <span class="card-category">Web3</span>
+                        <h3 class="card-title">Zero-Knowledge Proofs Explained</h3>
+                        <p class="card-description">Breaking down complex cryptographic concepts for mainstream audiences.</p>
+                        <div class="card-meta">
+                            <span class="card-year">2023</span>
+                            <span class="card-type">Technical Guide</span>
+                        </div>
+                        <div class="card-hover-content">
+                            <span class="view-project">View Article →</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Common Questions</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question">
+                        <h3>What are your rates?</h3>
+                        <div class="faq-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>My standard rate is <strong>$0.35 per word</strong>. I accept payment via bank transfer, PayPal, or cryptocurrency. Project-based pricing is also available for larger engagements.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="150">
+                    <div class="faq-question">
+                        <h3>What type of content do you specialize in?</h3>
+                        <div class="faq-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>I specialize in <strong>long-form informative content</strong> and <strong>SEO-optimized articles</strong>. This includes case studies, whitepapers, technical documentation, thought leadership pieces, and in-depth industry analysis.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h3>Do you write about topics outside your specialization?</h3>
+                        <div class="faq-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! While my core expertise is in Web3, finance, and technology, I'm always open to exploring new topics. If you have an interesting project, let's discuss how I can help bring your vision to life.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="contact-content" data-aos="fade-up">
+                <span class="section-tag">Get in Touch</span>
+                <h2 class="contact-title">Let's Create Something Great</h2>
+                <p class="contact-description">
+                    Ready to elevate your content? I'd love to hear about your project
+                    and explore how we can work together.
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:harry@harryh.tech" class="contact-btn primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        <span>Send an Email</span>
+                    </a>
+                    <a href="https://linkedin.com/in/harry" class="contact-btn secondary" target="_blank" rel="noopener">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="#" class="contact-btn secondary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                        <span>Download CV</span>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-visual" data-aos="fade-left">
+                <div class="contact-decoration">
+                    <div class="deco-circle circle-1"></div>
+                    <div class="deco-circle circle-2"></div>
+                    <div class="deco-circle circle-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Harry H. Crafted with passion.</p>
+            <div class="footer-links">
+                <a href="#hero">Back to Top ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
