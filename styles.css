@@ -783,8 +783,8 @@ a {
 /* Hero Visual */
 .hero-visual {
     position: relative;
-    width: 450px;
-    height: 450px;
+    width: 500px;
+    height: 520px;
     flex-shrink: 0;
 }
 
@@ -833,39 +833,51 @@ a {
 }
 
 .card-1 {
-    top: 2%;
+    top: 0;
     left: 0;
     animation-delay: 0s;
 }
 
 .card-2 {
-    top: 2%;
+    top: 0;
     right: 0;
     animation-delay: 2s;
 }
 
 .card-3 {
-    top: 33%;
-    left: -5%;
+    top: 24%;
+    left: -3%;
     animation-delay: 4s;
 }
 
 .card-4 {
-    top: 33%;
-    right: -5%;
+    top: 24%;
+    right: -3%;
     animation-delay: 1s;
 }
 
 .card-5 {
-    bottom: 10%;
+    top: 48%;
     left: 0;
     animation-delay: 3s;
 }
 
 .card-6 {
-    bottom: 10%;
+    top: 48%;
     right: 0;
     animation-delay: 5s;
+}
+
+.card-7 {
+    top: 72%;
+    left: -3%;
+    animation-delay: 1.5s;
+}
+
+.card-8 {
+    top: 72%;
+    right: -3%;
+    animation-delay: 3.5s;
 }
 
 @keyframes float {
