@@ -528,9 +528,8 @@ tiltCards.forEach(card => {
     });
 });
 
-// ===== Parallax Effect on Hero =====
+// ===== Parallax Effect on Hero (orbit ring only) =====
 const heroSection = document.querySelector('.hero');
-const floatingCards = document.querySelectorAll('.floating-card');
 const orbitRing = document.querySelector('.orbit-ring');
 
 window.addEventListener('scroll', () => {
@@ -538,34 +537,10 @@ window.addEventListener('scroll', () => {
     const heroHeight = heroSection.offsetHeight;
 
     if (scrolled < heroHeight) {
-        floatingCards.forEach((card, index) => {
-            const speed = 0.15 + (index * 0.05);
-            const rotation = scrolled * 0.02;
-            card.style.transform = `translateY(${scrolled * speed}px) rotate(${rotation}deg)`;
-        });
-
         if (orbitRing) {
             orbitRing.style.transform = `translate(-50%, -50%) rotate(${scrolled * 0.1}deg)`;
         }
     }
-});
-
-// ===== Parallax on Mouse Move =====
-document.addEventListener('mousemove', (e) => {
-    const mouseX = e.clientX / window.innerWidth - 0.5;
-    const mouseY = e.clientY / window.innerHeight - 0.5;
-
-    floatingCards.forEach((card, index) => {
-        const depth = 20 + index * 10;
-        const moveX = mouseX * depth;
-        const moveY = mouseY * depth;
-        const baseTransform = card.style.transform || '';
-
-        // Only apply if we're in the hero section view
-        if (window.pageYOffset < heroSection.offsetHeight) {
-            card.style.transform = `translateX(${moveX}px) translateY(${moveY}px)`;
-        }
-    });
 });
 
 // ===== Text Reveal Animation =====
