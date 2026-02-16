@@ -757,3 +757,63 @@ const revealOnScroll = () => {
 
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll();
+
+// ===== Footer Typing Animation =====
+const footerTyping = document.getElementById('footer-typing');
+if (footerTyping) {
+    const phrases = [
+        'blog posts',
+        'email campaigns',
+        'video scripts',
+        'whitepapers',
+        'content strategies',
+        'case studies',
+        'technical docs',
+        'landing pages'
+    ];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    const typeLoop = () => {
+        const current = phrases[phraseIndex];
+        if (isDeleting) {
+            footerTyping.textContent = current.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            footerTyping.textContent = current.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        let delay = isDeleting ? 40 : 80;
+
+        if (!isDeleting && charIndex === current.length) {
+            delay = 2000;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            delay = 400;
+        }
+
+        setTimeout(typeLoop, delay);
+    };
+
+    typeLoop();
+}
+
+// ===== Footer Easter Egg =====
+const footerEgg = document.getElementById('footer-egg');
+if (footerEgg) {
+    const emojis = ['H', '✍️', '🚀', '💡', '⚡', '🎯', '📝', '🔥'];
+    let clickCount = 0;
+
+    footerEgg.addEventListener('click', () => {
+        clickCount++;
+        footerEgg.classList.add('spinning');
+        const icon = footerEgg.querySelector('.egg-icon');
+        icon.textContent = emojis[clickCount % emojis.length];
+
+        setTimeout(() => footerEgg.classList.remove('spinning'), 600);
+    });
+}
