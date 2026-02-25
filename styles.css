@@ -1788,6 +1788,140 @@ a {
     animation-delay: 2s;
 }
 
+.contact-center-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--metallic-1);
+    background-size: 200% 200%;
+    animation: metallicShine 3s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 40px rgba(14, 165, 233, 0.4);
+    z-index: 2;
+    cursor: pointer;
+    transition: var(--transition-medium);
+}
+
+.contact-center-icon:hover {
+    transform: translate(-50%, -50%) scale(1.15);
+    box-shadow: 0 0 60px rgba(14, 165, 233, 0.6);
+}
+
+.contact-center-icon svg {
+    width: 28px;
+    height: 28px;
+    color: #f0f9ff;
+}
+
+.center-pen {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 60;
+    animation: drawContactPen 2s ease 0.5s forwards;
+}
+
+.center-pen-line {
+    stroke-dasharray: 10;
+    stroke-dashoffset: 10;
+    animation: drawContactPen 1s ease 1.5s forwards;
+}
+
+@keyframes drawContactPen {
+    to { stroke-dashoffset: 0; }
+}
+
+.contact-center-icon:hover .center-pen,
+.contact-center-icon:hover .center-pen-line {
+    animation: contactPenWiggle 0.5s ease;
+    stroke-dashoffset: 0;
+}
+
+@keyframes contactPenWiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+}
+
+.floating-label {
+    position: absolute;
+    background: var(--gradient-glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    border-radius: 100px;
+    padding: 0.35rem 0.85rem;
+    font-family: var(--font-primary);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--accent-secondary);
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.label-1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: orbitLabel1 12s linear infinite;
+}
+
+.label-2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: orbitLabel2 12s linear infinite;
+}
+
+.label-3 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: orbitLabel3 12s linear infinite;
+}
+
+.label-4 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: orbitLabel4 12s linear infinite;
+}
+
+@keyframes orbitLabel1 {
+    0%   { transform: translate(calc(-50% + 140px), -50%); }
+    25%  { transform: translate(-50%, calc(-50% + 140px)); }
+    50%  { transform: translate(calc(-50% - 140px), -50%); }
+    75%  { transform: translate(-50%, calc(-50% - 140px)); }
+    100% { transform: translate(calc(-50% + 140px), -50%); }
+}
+
+@keyframes orbitLabel2 {
+    0%   { transform: translate(-50%, calc(-50% + 140px)); }
+    25%  { transform: translate(calc(-50% - 140px), -50%); }
+    50%  { transform: translate(-50%, calc(-50% - 140px)); }
+    75%  { transform: translate(calc(-50% + 140px), -50%); }
+    100% { transform: translate(-50%, calc(-50% + 140px)); }
+}
+
+@keyframes orbitLabel3 {
+    0%   { transform: translate(calc(-50% - 140px), -50%); }
+    25%  { transform: translate(-50%, calc(-50% - 140px)); }
+    50%  { transform: translate(calc(-50% + 140px), -50%); }
+    75%  { transform: translate(-50%, calc(-50% + 140px)); }
+    100% { transform: translate(calc(-50% - 140px), -50%); }
+}
+
+@keyframes orbitLabel4 {
+    0%   { transform: translate(-50%, calc(-50% - 140px)); }
+    25%  { transform: translate(calc(-50% + 140px), -50%); }
+    50%  { transform: translate(-50%, calc(-50% + 140px)); }
+    75%  { transform: translate(calc(-50% - 140px), -50%); }
+    100% { transform: translate(-50%, calc(-50% - 140px)); }
+}
+
 @keyframes expandPulse {
     0%, 100% {
         transform: translate(-50%, -50%) scale(1);
