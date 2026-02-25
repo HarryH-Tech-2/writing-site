@@ -802,57 +802,6 @@ if (footerTyping) {
     typeLoop();
 }
 
-// ===== Contact Pen Click Animation =====
-const contactPen = document.querySelector('.contact-center-icon');
-if (contactPen) {
-    contactPen.addEventListener('click', () => {
-        // Spin the pen
-        contactPen.classList.add('pen-clicked');
-        setTimeout(() => contactPen.classList.remove('pen-clicked'), 1000);
-
-        // Spawn burst particles
-        const rect = contactPen.getBoundingClientRect();
-        const cx = rect.left + rect.width / 2;
-        const cy = rect.top + rect.height / 2;
-
-        for (let i = 0; i < 10; i++) {
-            const particle = document.createElement('div');
-            const angle = (i / 10) * Math.PI * 2 + (Math.random() * 0.3);
-            const distance = 50 + Math.random() * 50;
-            const dx = Math.cos(angle) * distance;
-            const dy = Math.sin(angle) * distance;
-            const size = 3 + Math.random() * 5;
-            const delay = i * 25;
-
-            particle.style.cssText = `
-                position: fixed;
-                left: ${cx - size / 2}px;
-                top: ${cy - size / 2}px;
-                width: ${size}px;
-                height: ${size}px;
-                background: var(--accent-secondary, #38bdf8);
-                border-radius: 50%;
-                pointer-events: none;
-                z-index: 10000;
-                box-shadow: 0 0 8px var(--accent-primary, #0ea5e9);
-                transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.9s ease-out;
-                opacity: 1;
-                transform: scale(1);
-            `;
-            document.body.appendChild(particle);
-
-            setTimeout(() => {
-                requestAnimationFrame(() => {
-                    particle.style.transform = `translate(${dx}px, ${dy}px) scale(0)`;
-                    particle.style.opacity = '0';
-                });
-            }, delay);
-
-            setTimeout(() => particle.remove(), 1000 + delay);
-        }
-    });
-}
-
 // ===== Footer Easter Egg =====
 const footerEgg = document.getElementById('footer-egg');
 if (footerEgg) {
