@@ -1706,6 +1706,16 @@ a {
     margin-bottom: 2.5rem;
 }
 
+.contact-email {
+    color: var(--accent-primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.contact-email:hover {
+    text-decoration: underline;
+}
+
 .contact-links {
     display: flex;
     flex-wrap: wrap;
