@@ -358,18 +358,19 @@ filterBtns.forEach(btn => {
         let visibleIndex = 0;
 
         workCards.forEach((card) => {
-            const category = card.getAttribute('data-category');
+            card.style.animation = 'none';
+            card.classList.add('hidden');
+        });
 
-            if (filter === 'all' || category === filter) {
-                card.classList.remove('hidden');
-                card.style.animation = `fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards ${visibleIndex * 0.08}s`;
-                visibleIndex++;
-            } else {
-                card.style.animation = 'fadeOutDown 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards';
-                setTimeout(() => {
-                    card.classList.add('hidden');
-                }, 400);
-            }
+        requestAnimationFrame(() => {
+            workCards.forEach((card) => {
+                const category = card.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                    card.classList.remove('hidden');
+                    card.style.animation = `fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards ${visibleIndex * 0.05}s`;
+                    visibleIndex++;
+                }
+            });
         });
     });
 });
