@@ -1433,7 +1433,6 @@ a {
     overflow: hidden;
     position: relative;
     transition: var(--transition-medium);
-    cursor: pointer;
     backdrop-filter: blur(10px);
 }
 

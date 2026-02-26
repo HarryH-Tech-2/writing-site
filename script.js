@@ -519,13 +519,6 @@ tiltCards.forEach(card => {
         card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0) scale3d(1, 1, 1)';
     });
 
-    // Click handler for cards with URLs
-    card.addEventListener('click', () => {
-        const url = card.getAttribute('data-url');
-        if (url) {
-            window.open(url, '_blank');
-        }
-    });
 });
 
 // ===== Parallax Effect on Hero (orbit ring only) =====
