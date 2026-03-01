@@ -1534,6 +1534,25 @@ a {
     flex-grow: 1;
 }
 
+.card-results {
+    list-style: none;
+    padding: 0;
+    margin: -0.5rem 0 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.card-results li {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-secondary);
+    background: rgba(14, 165, 233, 0.1);
+    border: 1px solid rgba(14, 165, 233, 0.2);
+    border-radius: 100px;
+    padding: 0.25rem 0.75rem;
+}
+
 .card-meta {
     display: flex;
     justify-content: space-between;
