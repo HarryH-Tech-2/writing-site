@@ -730,7 +730,7 @@ function createMatrixRain() {
 
 // ===== Console Easter Egg =====
 console.log('%c Welcome to Harry\'s Portfolio! ', 'background: linear-gradient(90deg, #0ea5e9, #38bdf8, #7dd3fc); color: #030712; font-size: 20px; padding: 10px; border-radius: 5px; font-weight: bold;');
-console.log('%c Looking for a great writer? Let\'s connect! ', 'color: #38bdf8; font-size: 14px;');
+console.log('%c Looking for a content strategist? Let\'s connect! ', 'color: #38bdf8; font-size: 14px;');
 console.log('%c Try the Konami Code for a surprise... ', 'color: #7dd3fc; font-size: 12px; font-style: italic;');
 
 // ===== Smooth reveal for work cards on scroll =====
@@ -756,14 +756,14 @@ revealOnScroll();
 const footerTyping = document.getElementById('footer-typing');
 if (footerTyping) {
     const phrases = [
-        'blog posts',
-        'email campaigns',
-        'video scripts',
-        'whitepapers',
         'content strategies',
-        'case studies',
-        'technical docs',
-        'landing pages'
+        'editorial systems',
+        'SEO growth programs',
+        'content operations',
+        'editorial calendars',
+        'content audits',
+        'performance dashboards',
+        'content programs'
     ];
     let phraseIndex = 0;
     let charIndex = 0;
